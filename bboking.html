@@ -5,9 +5,101 @@
     </head>
            <body>
             <center>
-                <h1 style = "color:rgb(255, 0, 0)" > FLIGHT TICKET BOOKING</h1>
+                <h1 style = "color:rgb(81, 0, 255)" > FLIGHT TICKET BOOKING</h1>
             </center>
-            <a href="home.html">click here to go back</a>
+            <a href="home.html">click here to go back</a><br>
+            <center>
+            <b>BOOKING FORM</b>
+<form action="print.html" method="GET">
+    <table>
+        <tr><td>
+<label for="FirstName"><b>First Name:</b></label></td>
+<td><input type="text" id="FirstName" name="FirstName" placeholder="Your First Name"/><br>
+            </td></tr>
+        <tr><td>
+<label for="LastName"><b>Last Name:</b></label></td>
+<td><input type="text" id="LastName" name="LastName" placeholder="Your Last Name"/>
+            </td></tr>
+
+            <tr><td>
+                <label for="Gender"><b>Gender:</b></label></td>
+                <td><input type="radio" id="Gender" name="Gender" value="1"/>Male
+                    <input type="radio" id="Gender" name="Gender" value="2"/>Female
+                            </td></tr>
+
+        <tr><td>
+<label for="Address"><b>Address:</b></label></td>
+<td><textarea id="Address" name="Address" placeholder="Your First Name" rows="6" cols="21"></textarea>
+</td></tr>
+    <tr><td>
+                <label for="DOB"><b>Date Of Birth:</b></label></td>
+<td><input type="date" id="DOB" name="DOB" placeholder="Your DOB"/>
+
+            </td>
+        </tr>
+
+
+        <tr><td>
+            <label for="Phone Number:"><b>Phone Number:</b></label></td>
+            <td><input type="number" id="PHONE NUMBER" name="PHONE NUMBER" placeholder="Your Phone Number"/><br>
+                        </td></tr>
+
+                        <tr><td>
+                            <label for="Email"><b>First Name:</b></label></td>
+                            <td><input type="email" id="Email" name="contact" placeholder="Your Email"/><br>
+                                       </td></tr>
+
+                                       <tr><td>
+                                        <label for="Can we contact you?"><b>Can We Contact You?:</b></label></td>
+                                        <td><input type="radio" id="yes" name="contact" value="1"/>Yes
+                                            <input type="radio" id="no" name="contact" value="2"/>No
+                                                    </td></tr>
+                                                  
+                                                    <tr><td>
+                                                        <label for="Communication Preference"><b>Communication Preference:</b></label></td>
+                                                        <td><input type="checkbox" id="terms" name="Communication preference" value="1"/>Email
+                                                            <input type="checkbox" id="terms" name="Communication preference" value="2"/>SMS
+                                                                    </td></tr><br>
+                                                                    <tr><td> 
+                                                                    <input type="checkbox" id="terms" name="terms"/>I agree to the <span style="color:blue;">terms and conditions</span> of the website
+                                                                    </td>
+                                                                    </tr>
+                                                                  
+                            
+
+
+
+        <tr>
+            <td>
+                <input type="SUBMIT" onclick="saveData();"id="SUBMIT" name="SUBMIT" value="SUBMIT" style="background-color:blue;color:white;"  />
+           
+                <input type="reset" id="RESET" value="RESET"style="background-color:blue;color:white;" />
+            </td>
+            
+        </tr>
+    </table>
+</form>
+</center>
+<!-- Booking Form End -->
+<script>
+    function saveData(){
+        var FirstName = document.getElementById('FirstName').value;
+        var LastName= document.getElementById('LastName').value;
+        var Address = document.getElementById('Address').value;
+        alert('First Name'+FirstName);
+        var formData = {
+            FirstName,
+            LastName,
+            Address
+
+        }
+        //
+        
+        localStorage.setItem('formData',JSON.stringify(formData));
+
+    }
+</script>
+
             </body>
           </html>
 

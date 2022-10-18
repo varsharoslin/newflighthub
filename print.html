@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Print</title>
+    </head>
+    <body>
+        <b>Details Submitted</b><br>
+        <input type="button" value="show data" onclick="showData();">
+        <script>
+            function showData()
+            {
+                var submittedData=localStorage.getItem('formData');
+                console.log(JSON.parse(submittedData));
+            }
+        </script>
+    </body>
+</html>
