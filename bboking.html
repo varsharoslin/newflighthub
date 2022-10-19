@@ -3,7 +3,13 @@
         <title>
             </title>
     </head>
-           <body>
+           <body background="">
+
+<video width="320" height="240" controls autoplay muted>
+    <source src="./video/sample.ogv" type="video/ogg">
+    your browser does not support for the tag
+</video>
+
             <center>
                 <h1 style = "color:rgb(81, 0, 255)" > FLIGHT TICKET BOOKING</h1>
             </center>
@@ -11,7 +17,27 @@
             <center>
             <b>BOOKING FORM</b>
 <form action="print.html" method="GET">
-    <table>
+
+
+    <table cellspacing="6" cellpading="2"
+    <tr>
+        <td>
+            <label for="title"><b>Title</b></label>
+
+        </td>
+        <td>
+            <select id="title" name="title">
+                <option value="1">Mr.</option>
+                <option value="2">Mrs.</option>
+                <option value="3" selected>Ms</option>
+                </select>
+
+
+        </td>
+    </tr>
+
+
+
         <tr><td>
 <label for="FirstName"><b>First Name:</b></label></td>
 <td><input type="text" id="FirstName" name="FirstName" placeholder="Your First Name"/><br>
@@ -49,6 +75,14 @@
                             <td><input type="email" id="Email" name="contact" placeholder="Your Email"/><br>
                                        </td></tr>
 
+
+                                       <tr><td>
+                                        <label for="file"><b>Upload file:</b></label></td>
+                                        <td><input type="file" id="file" name="file" accept=".pdf"/><br>
+                                                    </td></tr>
+                            
+
+
                                        <tr><td>
                                         <label for="Can we contact you?"><b>Can We Contact You?:</b></label></td>
                                         <td><input type="radio" id="yes" name="contact" value="1"/>Yes
@@ -83,6 +117,7 @@
 <!-- Booking Form End -->
 <script>
     function saveData(){
+        debugger
         var FirstName = document.getElementById('FirstName').value;
         var LastName= document.getElementById('LastName').value;
         var Address = document.getElementById('Address').value;

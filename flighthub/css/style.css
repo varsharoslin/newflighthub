@@ -1,0 +1,17 @@
+.container{
+    width: 50%;
+    height: 230px;
+    background-color: aqua;
+    padding: 10px 5px 5px 10px;
+    padding-top: 20px;
+    margin: 20px;
+    margin-top: 15%;
+    margin-left: 25%;
+    text-align: justify;
+}
+h1{
+    font-size: 40px;
+    color: green;
+    margin-top: -20px;
+    margin-left: 20px;
+}
